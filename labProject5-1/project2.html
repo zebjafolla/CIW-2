@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script type="text/javascript">
+    <!--
+        function whileTest()
+        {
+            var number = 8;
+            var answer = 0;
+            let ctr = 0;
+            while (number != answer && ctr != 3)
+            {   
+                if (answer != null)
+                {
+                    answer = prompt("Probably gonna a need a number between 1 and 10", "Max number of 3 guesses");
+                    ctr++
+                }
+                else
+                {
+                    alert("You have selected the cancel button and the number guessing game is over!");
+                    break;
+                }
+            }
+            if (answer == number)
+            {
+                alert("Youve answered " + answer + " and that is the correct answer! Congratulations!");
+            }
+            else if (answer != number && answer != null)
+            {
+                alert("You are out of guesses!");
+            }
+        }
+    //-->
+    </script>
+    <body>
+        <h1 style="text-align:center;">
+            <input value="Click to guess!" type="button" onclick="whileTest()"><span>Guess that number!</span></h1>
+        </h1>
+        <form name="form_1">Please choose your favorite area code
+            <br>
+            <hr style="width: 200px; float: left;">
+            <br>
+            <hr style="width: 200px; float:left;">
+            <br>
+                <select name="selectOne" onchange="mostFun(this)">
+                    <option selected value=null>Please select one</option>
+                    <option value="512">512</option>
+                    <option value="215">215</option>
+                    <option value="856">856</option>  
+                    <option value="609">609</option>  
+                    <option value="510">510</option>  
+                    <option value="267">267</option>              
+                </select>
+        </form>
+    <script>
+        function mostFun(selectOne)
+        {
+            alert("You have selected " + document.form_1.selectOne.value + ".");
+        }
+
+
+    </script>
+    </body>
+</html>
+
+

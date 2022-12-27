@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var color = prompt("Please choose a color", 'Please select red, white or blue');
+        if (color != null)
+        {
+            switch (color.toUpperCase())
+            {
+                case "RED": 
+                    alert("You chose Red, good job!");
+                    break;
+                case "BLUE":
+                    alert("You have chosen Blue, good job!");
+                    break;
+                case "WHITE":
+                    alert("You have chosen White, ok?");
+                    break;
+                default:
+                    alert("You didnt choose red, white or blue. Better luck next time chump!")
+                    break;
+            }   
+        }
+        else
+        {
+            alert("You chose to cancel the prompt box");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onOver() {
+            /* The style object is used to access the style element of a page. Styles can
+     be added as: object.style.property = value */
+            document.getElementById("sample").style.fontSize = "40px";
+        }
+        function onOut() {
+            document.getElementById("sample").style.fontSize = "2rem";
+        }
+        document.write(document);
+        document.write(document);
+        document.write(document);
+
+    </script>
+</head>
+<body>
+
+    <a class="sample" name='sample' href="https://www.CIWcertified.com" id="sample" onmouseover="onOver()" onmouseout="onOut()">Visit CIW</a>
+    <a class="hell" name='hell' href="https://www.CIWcertified.com" id="hell" onmouseover="onOver()" onmouseout="onOut()">Visit CIW</a>
+    <a class="sampler" name='sampler' href="https://www.CIWcertified.com" id="sampler" onmouseover="onOver()" onmouseout="onOut()">Visit CIW</a>
+    <a class="myanchor" name='my-anchor' href="https://www.CIWcertified.com" id="sniper" onmouseover="onOver()" onmouseout="onOut()">Visit CIW</a>
+   
+    <button onclick="blue()">Click to set background to color blue
+    </button>
+    <script>
+    <!--
+        //   Write a function that gets the first anchor element in the document and changes its href attribute to a different URL. 
+    document.anchors[3].href = 'https://www.google.com';
+    for (i = 0; i < document.anchors.length; i++)
+    {
+        console.log(document.anchors[i].name);
+    }
+    // Write a function that gets all the anchor elements in the document and logs their name attribute and href attribute to the console.
+    function attributes()
+    {
+        for (i = 0; i < document.anchors.length; i++)
+        {
+            console.log(document.anchors[i].name + " " + document.anchors[i].href);
+        }
+    }
+    attributes();
+
+    // Write a function that gets the anchor element with the name attribute of 'my-anchor' and changes its innerHTML (the text inside the anchor element) to a different string.
+    function get_anchor()
+    {
+        var att = "my-anchor";
+        var anchor = document.anchors.namedItem(att);
+        if(anchor != null)
+        {
+            anchor.innerHTML = 'different string';
+            console.log(anchor.name + " " +  anchor.href);
+        }
+        else
+        {
+            console.log("The " + "'" + att + "'" + " element doesnt exist.");
+        }
+    }
+    get_anchor();
+    // Write a function that gets the innerHTML of the body element and logs it to the console.
+    function get_inner()
+    {
+        console.log(document.body);
+    }
+    get_inner();
+
+    // Write a function that sets the innerHTML of the body element to a string of your choice.
+    // function set_inner()
+    // {
+    //     document.body.innerHTML = "This is a different string that I've chosen."
+    // }
+    // set_inner();
+
+    // Write a function that gets the style property of the body element and logs it to the console.
+    function getStyle()
+    {
+        console.log(document.body.style)
+    }
+    getStyle();
+    // Write a function that sets the background-color style of the body element to a color of your choice.
+    function blue()
+    {
+        document.body.style.background = "blue";
+    }
+    // Write a function that gets the classList property of the body element and logs it to the console.
+    function getClass()
+    {
+        console.log(document.body.classList);
+    }
+    getClass();
+    
+    document.write("<br><br>This page last updated " + document.lastModified);
+
+   
+    //-->
+    </script>
+</body>
+</html>

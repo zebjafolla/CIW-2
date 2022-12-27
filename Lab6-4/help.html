@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Window</title>
+</head>
+<body>
+    <button onclick="openWindow()">Open Window</button>
+    
+    <script type="text/javascript">
+
+            function writeToDocument() {
+    var textColor, backColor, pageTitle;
+    var yourText, pageContent, docWindow;
+  
+    textColor = prompt("Please enter a text color:","white");
+    backColor = prompt("Please enter a background color:","black");
+    pageTitle = prompt("The page will be titled: ", "Default Title");
+    yourText = prompt("Add content to the new document:", "page content");
+  
+  
+    docWindow = open("","docWin","width=250,height=150, resizable=1,status=1");
+  
+    with (docWindow.document) {
+      open();
+      write("<body bgcolor='" + backColor + "' fgcolor='" + textColor + "'>");
+      write(pageContent);
+      close();
+    }
+  }
+  
+    </script>
+</body>
+</html>

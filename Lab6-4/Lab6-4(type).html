@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        console.log(pageContent);
+        function writeToDocument()
+        {
+            var textColor, backColor, pageTitle;
+            var yourText, pageContent, docWindow;
+            textColor = prompt("Please enter a color", "");
+            backColor = prompt("Please enter a background color", "");
+            pageTitle = prompt("Please enter a title for your webpage", "");
+            yourText = prompt("Please enter some text to go into your webpage", "");
+            docWindow = window.open();
+            docWindow.document.body.style.backgroundColor = backColor;
+            docWindow.document.body.style.color = textColor;
+            docWindow.document.write("<html><head><title>Doc title</title><script>alert('The page ' + document.title + ' was created: ' + document.lastModified);</script></head><body style="background-color: `${backColor}`; color: `${textColor}`;"><strong>" + `${yourText}` + </strong></body></html>")
+        }   
+    </script>
+</head>
+<body>
+    <h1>CIW Javascript Specialist</h1>
+    <hr>
+    <br>
+    <button onclick="writeToDocument()"> Write to remote document</button>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function writeToDocument() {
+            var textColor, backColor, pageTitle;
+            var yourText, pageContent, docWindow;
+            textColor = prompt("Please enter a color", "");
+            backColor = prompt("Please enter a background color", "");
+            pageTitle = prompt("Please enter a title for your webpage", "");
+            yourText = prompt("Please enter some text to go into your webpage", "");
+            docWindow = window.open();
+            docWindow.document.body.style.backgroundColor = backColor;
+            docWindow.document.body.style.color = textColor;
+            docWindow.document.open("", "docWin", "width=200, height=200");
+            docWindow.document.write("<html>
+              <head>
+                <title>`${pageTitle}`</title>
+                <script>
+                  alert('The page ' + document.title + ' was created: ' + document.lastModified);
+                </script>
+              </head>
+              <body style='background-color: `${backColor}`; color: `${textColor}`;'>
+                <strong>`${yourText}`</strong>
+              </body>
+            </html>");
+            docWindow.document.close();
+        }   
+    </script>
+</head>
+<body>
+    <h1>CIW Javascript Specialist</h1>
+    <hr>
+    <br>
+    <button onclick="writeToDocument()"> Write to remote document</button>
+</body>
+</html>

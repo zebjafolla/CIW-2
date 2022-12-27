@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript lab 6-4</h1>
+    <hr>
+    <br>
+    <br>
+        <button onclick="writeToDocument()">Click here to open a new window</button>
+    <script>
+    function writeToDocument() 
+    {
+    var textColor, backColor, pageTitle;
+    var yourText, pageContent, docWindow;
+    textColor = prompt("Please enter a text color:","white");
+    backColor = prompt("Please enter a background color:","black");
+    pageTitle = prompt("The page will be titled: ", "Default Title");
+    yourText = prompt("Add content to the new document:", "page content");
+    console.log(backColor);
+    console.log(textColor);
+    docWindow = window.open("","docWin","width=250, height=150, resizable=1,status=1");
+    docWindow.document.open();
+    docWindow.document.body.style.backgroundColor="red";
+    docWindow.document.body.style.color="green";
+    docWindow.document.write(yourText);
+    docWindow.document.close();
+    }   
+    </script>
+</body>
+</html>

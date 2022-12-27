@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="welcomeUser()">Click for more information about your browser</button>
+    <script>
+        var userAgent1 = window.navigator.userAgent;
+        function welcomeUser()
+        {
+            var appCodeName1 = window.navigator.appCodeName;
+            var appName1 = window.navigator.appName;
+            var appVersion1 = window.navigator.appVersion;
+            
+            var info = `
+            Welcome ${appCodeName1}. 
+            You are using the ${appName1}. 
+            Your using version ${appVersion1}. 
+            Your information is ${userAgent1}.
+            `;
+            alert(info);
+            // function openWindow() {
+            // const appCodeName = window.navigator.appCodeName;
+            // const appName = window.navigator.appName;
+            // const appVersion = window.navigator.appVersion;
+            // const userAgent = window.navigator.userAgent;
+
+            // const message = `Welcome, ${appCodeName} user!
+            // You are using the ${appName} browser, version ${appVersion}.
+            // Your user agent information is ${userAgent}.`;
+
+            // alert(message);
+            // }
+
+        }
+        document.write(`<p>The properties of the <strong><em>userAgent</em></strong> are ${userAgent1}.</p>`)
+        
+    </script>
+</body>
+</html>
