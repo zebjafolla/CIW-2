@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ctr = 0;
+        console.log(navigator.userAgent.indexOf("Firefox"));
+        if (navigator.userAgent.indexOf("Firefox") == -1 && ctr != 1)
+        {
+            ctr++;
+            alert("Please switch to Mozilla Firefox to view this application");
+            let answer = confirm("Press Ok to go to Mozilla firefox or press cancel to stay here");
+            if (answer == true)
+            {
+                window.location = "http://www.mozilla.com";
+            }
+            else
+            {
+                alert("You have pressed cancel and will stay here");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>CIW App Project 6</h1>
+    <hr>
+    <br>
+    <form name="form1">
+        <label>Please select a picture and a new window will pop up to show it.
+            <br>
+            <br>
+            <select name="selector">
+                <option value="cthulu.JPG">Cthulu</option>
+                <option value="deathfest.JPG">Deathfest</option>
+                <option value="cthulu2.JPG">Cthulu2</option>
+                <option value="deathfest2.JPG">Deathfest2</option>
+                <option value="IMG_0018.JPG">Flood Image #1</option>
+                <option value="IMG_0020.JPG">Flood Image #2</option>
+                <option value="IMG_0024.JPG">Flood Image #3</option>
+                <option value="pope.JPG">The Pope</option>
+            </select>
+            <button onclick="picWindow()">Click here to see selected picture</button>
+        </label>
+    </form>
+    <script>
+        function picWindow()
+        {
+            var selected = document.form1.selector.value;
+            var selectedName = document.form1.selector.options[document.form1.selector.selectedIndex].text;
+            var index = document.form1.selector.options.selectedIndex;
+            console.log(index);
+            console.log(selectedName);
+            switch (index)
+            {
+                case 0:
+                    var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><br><br><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }
+                    break;
+                case 1:
+                var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }   
+                case 2:
+                var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }   
+                case 3:
+                var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }   
+                case 4:
+                var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }   
+                case 5:
+                var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }   
+                case 6:
+                var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }   
+                case 7:
+                var winpic1 = open("","picture1window","width=800, height=600");
+                     with(winpic1.document)
+                    {
+                        write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color=white;"><h3>' + selectedName + '</h3><img height="150" width="150" src="' + selected + '"><form><button onclick="window.close()">Click here to close this window</button></form></body></html>');
+                        close();
+                        window.focus();
+                    }   
+            }
+        }
+    </script>
+</body>
+</html>
+
