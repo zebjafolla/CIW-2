@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        if (navigator.userAgent.indexOf("Firefox") == -1)
+        let ctr = 0;
+        do 
         {
-            alert("Please switch to Mozilla Firefox to view this application");
-            let answer = confirm("Press Ok to go to Mozilla firefox or press cancel to stay here");
-            if (answer == true && ctr)
+            if (navigator.userAgent.indexOf("Firefox") == -1)
             {
-                window.location = "http://www.mozilla.com";
+                alert("Please switch to Mozilla Firefox to view this application");
+                let answer = confirm("Press Ok to go to Mozilla firefox or press cancel to stay here");
+                console.log("answer = " + answer);
+                if (answer == true)
+                {
+                    window.location = "http://www.mozilla.com";
+                }
+                else if (answer == false)
+                {
+                    alert("You have pressed cancel and will stay here");
+                }
             }
-            else
-            {
-                alert("You have pressed cancel and will stay here");
-            }
+            ctr++;
         }
+        while (ctr != 1);
+        console.log("ctr = " + ctr);
     </script>
 </head>
 <body>
@@ -39,7 +47,7 @@
                 <option value="IMG_0024.JPG">Flood Image #3</option>
                 <option value="pope.JPG">The Pope</option>
             </select>
-            <button onclick="picWindow()">Click here to see selected picture</button>
+            <button type="button" onclick="picWindow()">Click here to see selected picture</button>
         </label>
     </form>
     <script>
@@ -48,18 +56,21 @@
             var selected = document.form1.selector.value;
             var selectedName = document.form1.selector.options[document.form1.selector.selectedIndex].text;
             var index = document.form1.selector.options.selectedIndex;
-            console.log(index);
-            console.log(selectedName);
-            var winpic1 = open("","picture1window","resize=1, popup");
+            console.log("index = " + index);
+            console.log("selectedName = " + selectedName);
+            var winpic1 = open("","picture1window","resize=1, width=500, height=500, top=400, left=400");
+            console.log(winpic1);
             if(winpic1 == null)
             {
                 alert("An error occured");
             }
             else
             {
-                winpic1.document.write('<html><head><title>AppProject6</title></head><body align="center" style="background-color: green; color: white;"><h3>' + selectedName + '</h3><img style="height:150; width:150;" src="' + selected + '"><br><br><form><button onclick="close()">Click here to close this window</button></form></body></html>');
+                winpic1.document.write('<html><head><title>AppProject6</title></head><body style="background-color: green; color: white; display: flex; flex-direction: column; align-items:center; justify-content:space-around;"><h3>' + selectedName + '</h3><img style="height:150; width:150;" src="' + selected + '"><br><br><form><button type="button" onclick="self.close()">Click here to close this window</button></form></body></html>');
                 winpic1.document.close();
+                window.blur();
                 winpic1.focus();
+                document.form1.selector.selectedIndex = 0;
             }
         }
     </script>
