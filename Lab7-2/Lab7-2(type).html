@@ -1,0 +1,53 @@
+<!-- The following lab demonstrates some methods of the String object used to manipulate the contents of text boxes. Suppose you are creating a form for a contest that your company is offering. Your marketing department will need accurate contact information from all site visitors who submit the form so that they can award prizes and make follow-up sales calls. You know from experience that site users often make typos in their phone numbers and email addresses when submitting online forms. So you use methods of the String object to check the users' form input. You can verify that they include the right number of digits for a phone number and the correct syntax for a valid email address. You can also convert their entries into uppercase or lowercase letters to be consistent with your database input schemes. This practice of checking and guiding user input is called form validation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CIW Mess-Around</h1>
+    <hr>
+    <form>
+        <label >Please enter your email
+            <br>
+            <br>
+            <input name='input1' type="email" placeholder="email">
+            <br>
+        </label>
+        <label>
+            <br>
+            <input name="input2" type="number" placeholder="phone number">
+            <br>
+        </label>
+    <hr>
+    <input type="button" onclick="formSubmit()" value="submit">
+    </form>
+    <script>
+        function formSubmit()
+        {   
+            // email validation
+            var emailSelect = document.querySelector('input[name="input1"]');
+            var email = emailSelect.value;
+            console.log(email);
+            if (email.length > 6 && email.indexOf('@') != -1)
+            {
+                email = email.toUpperCase();
+                alert(email + " is a valid email address!");
+            }
+
+            // phone validation
+            var phoneNumb = document.querySelector('input[name="input2"]');
+            var number = phoneNumb.value;
+            console.log(number);
+            if (number.length == 10)
+            {
+                alert("you have a valid phone number!");
+            }
+
+        }
+    </script>
+</body>
+</html>

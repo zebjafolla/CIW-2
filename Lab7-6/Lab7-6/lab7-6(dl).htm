@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lab 7-6</title>
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+</body>
+  <script>
+    
+   
+    var btn = document.createElement("button");
+      
+      btn.textContent = "Click here to see results";
+      btn.addEventListener('click', fn);
+      document.body.appendChild(btn);
+
+
+
+    
+
+ 
+  function fn() {
+   
+ //Write code here
+ let num = [1,2,3,4,5];
+ var sq = num.map(function(n){
+    return n * n;
+    
+ });
+ alert("The results of the num array squared are " + sq);
+}
+
+
+
+
+</script>
+
+
+</html>
+<!-- 
+// Create a button element
+var button = document.createElement('button');
+
+// Set the button's text content
+button.textContent = 'Click me';
+
+// Add an onclick event listener to the button
+button.addEventListener('click', fn);
+
+// Append the button to the body element
+document.body.appendChild(button);
+
+function fn() {
+  // Define the num array
+  var num = [1, 2, 3, 4, 5];
+
+  // Initialize the sq object and assign it the result of calling map on num
+  var sq = num.map(function(n) {
+    // Return the square of each element in num
+    return n * n;
+  });
+
+  // Display the contents of the sq array using the alert method
+  alert(sq);
+} -->

@@ -97,6 +97,99 @@
     
     document.write("<br><br>This page last updated " + document.lastModified);
 
+//     Write a regular expression that matches a string that contains a 5-digit zip code. Test your regular expression with the following strings:
+// "My zip code is 90210."
+// "I live in a small town with no zip code."
+// "The company's office is located at 12345."
+
+//     var userInput = ["My zip code is 09210.", "I live in a small town with no zip code.", "The company's office is located at 12345."];
+//     var myRegExp = new RegExp("\\b\\d{5}\\b");
+//     for (i = 0; i < userInput.length; i++)
+//     {
+//         document.write(myRegExp.test(userInput[i]));
+//         console.log(myRegExp.test(userInput[i]));
+
+//     }
+
+//     var userInput = ["My zip code is 09210.", "I live in a small town with no zip code.", "The company's office is located at 12345."];
+// var myRegExp = new RegExp("\d{5}");
+// for (i = 0; i < userInput.length; i++)
+// {
+//     document.write(myRegExp.test(userInput[i]));
+//     console.log(myRegExp.test(userInput[i]));
+// }
+    
+
+
+
+
+// Write a regular expression that matches a string that contains a phone number with the format (123) 456-7890. Test your regular expression with the following strings:
+// "You can reach me at (123) 456-7890."
+// "I prefer to be contacted by phone: (123) 456-7890."
+// "The customer service number is (123) 456-7890."
+    // let userInput = ['You can reach me $ at (123) 456-7890.', 'I prefer to be contact by phone: (123) 456-7890.', 'The customer service number is (123) 456-7890.']
+    // let myRegExp = /\(?\d{3}\)?\s?\d{3}[-?\s?]?\d{4}/;
+    
+    // for(i = 0; i < userInput.length; i++)
+    // {
+    //     console.log(myRegExp.test(userInput[i]));
+    // }
+
+
+
+
+// Write a regular expression that matches a string that contains a date in the format MM/DD/YYYY. Test your regular expression with the following strings:
+// "Today is 01/02/2022."
+// "The deadline for the project is 12/31/2022."
+// "I was born on 04/20/1999."
+
+// let userInput = ["Today is 01/03/2022.", "The deadline for the project is 12/31/2022.", "I was born on 04/20/1999."]
+// for (i = 0; i < userInput.length; i++)
+// {
+//     let myRegExp = /\d{2}\/\d{2}\/\d{4}/;
+//     console.log(myRegExp.test(userInput[i]));
+// }
+
+// 1. Write a regular expression that matches a string that consists of exactly three digits.
+
+// let simon = ["Hello there nice to meet you", "Have you had a nice day?", "Is the 4th of July, or is the year 223?"];
+// let myRegExp = /\d{3}/;
+// for (i = 0; i < simon.length; i++)
+// {
+//     console.log(myRegExp.test(simon[i]));
+// }
+
+// 2. Write a regular expression that matches a string that starts with the word "hello" and ends with the word "world".
+
+// let simon2 = ["Hello there nice to meet you", "hello Have you had a nice day?  world", "Is the 4th of July, or is the year 223?"];
+// let myRegExp2 = new RegExp("^hello world$")
+// for (i = 0; i < simon2.length; i++)
+// {
+//     console.log(myRegExp2.test(simon2[i]));
+// }
+
+// let simon2 = ["Hello there nice to meet you", "hello Have you had a nice day?  world", "Is the 4th of July, or is the year 223?"];
+// let myRegExp2 = new RegExp("^hello world$");
+// for (i = 0; i < simon2.length; i++)
+// {
+//     console.log(myRegExp2.test(simon2[i]));
+// }
+
+// let simon2 = ["Hello there nice to meet you", "hello world Have you had a nice day?  hello world", "Is the 4th of July, or is the year 223?"];
+// let myRegExp2 = new RegExp("^hello.*sworld$");
+// for (i = 0; i < simon2.length; i++)
+// {
+//     console.log(myRegExp2.test(simon2[i]));
+// }
+// let str = "hello, world!";
+// let regex = new RegExp('^hello.*world$', 'i');
+// let result = regex.test(str);
+
+// console.log(result);
+
+
+
+
    
     //-->
     </script>

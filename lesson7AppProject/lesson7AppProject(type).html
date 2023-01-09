@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript App Project Lesson 7</h1>
+    <form name="form">
+        <input type="text" name="textbox1">
+        <br>
+        <input type="text" name="textbox2">
+        <br>
+        Click to see if strings match or not: <button onclick="compare()">Match</button>
+    </form>
+    <script>
+       var entry1 = document.form.textbox1.value;
+       var entry2 = document.form.textbox2.value;
+       function compare()
+       {
+            var locate = entry1.match(entry2);
+            alert(locate);
+            if(locate)
+            {
+                alert("yes there is a match and its located at character " + locate);
+            }
+            else{
+                alert("there isnt a match");
+            }
+            
+       }
+    </script>
+</body>
+</html>

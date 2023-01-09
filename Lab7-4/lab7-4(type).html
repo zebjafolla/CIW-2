@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let cities = prompt("please enter the cities you will be playin in", "type in in 'done' when finished");
+    document.write("this is a the prompt answer " + cities);
+    let citiesArray = cities.split(' ')
+    document.write(" this is reg citiesArray " + citiesArray);
+    var len = citiesArray.length;
+    var sortedCities = citiesArray;
+    sortedCities.sort();
+    document.write("this is sortedCities Array" + sortedCities);
+    document.write("this is reg cities array " + citiesArray);
+    
+    for (i = 0; i < len; i++)
+    {
+        document.write(citiesArray[i] + "<br><br>" + "this is count " + i );
+        document.write(sortedCities[i] + "<br><br>" + "this is count " + i );
+    }
+    </script>
+</body>
+</html>
