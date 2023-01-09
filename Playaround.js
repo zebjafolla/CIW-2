@@ -150,13 +150,25 @@
 
 // 4. Write a regular expression that matches a string that consists of two or more words, separated by a single space.
 
-let simon4 = ["Hello there nice to meet you", "Have you had a nice day?", "Is the 4th of July, or is the year 223?"];
-console.log(toString(simon4));
+// let simon4 = ["8768768678678 Hello there nice to meet you.", "Have you had a nice day?", "Is the 4th of July, or is the year 223?"];
+// console.log(simon4.join(", "));
+// stringSimon4 = simon4.join(", ");
+// console.log(stringSimon4.match(/\b\w+\b \b\w+\b/));
 
 
 // 5. Write a regular expression that matches a string that contains a number with a decimal point, followed by one or more digits.
 
-let simon5 = ["Hello there nice to meet you", "Have you had a nice day?", "Is the 4th of July, or is the year 223?"]
+let simon5 = ["Hello there nice to meet you", "Have you had 1.34 nice day?", "Is the 4th of July, or is the year .3897798789?"]
+let regex = /\s\d+\.\d+\s/;
+for(i=0; i < simon5.length; i++)
+{
+    if(regex.test(simon5[i]) == true)
+    {
+        console.log(simon5[i]);
+    }
+}
+
+
 
 
 
