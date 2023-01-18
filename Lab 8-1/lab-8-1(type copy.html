@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please select from below to look up some employees</h1>
+    <br>
+    <hr>
+    <br>
+    <form name="form1">
+        <select>
+            <option value="neutral">Please Select</option>
+            <option value="shannon">Shannon Hash</option>
+            <option value="mataia">Mataia Lewis</option>    
+            <option value="rog">Rog Drew</option>
+            <option value="jesse">Jesse Drew</option>
+            <option value= adam>Adam Robison</option>
+            <option value="charlie">Charlie Kreuguer</option>
+        </select>
+        <br>
+        <br>
+        <input id="button" type="button" value="Show Employee">
+        <br>
+        <br>
+        <input id="button2" type="button" value="Show All Employees">
+    </form>
+    <!-- such as their department affiliations, office hours, business phone extensions and cell phone numbers -->
+    <!-- Employee "rog" is affiliated with the "IT" department. His office hours are from 9am to 5pm, his business phone extension is 123, and his cell phone number is 555-555-5551
+Employee "mataia" is affiliated with the "HR" department. Her office hours are from 8am to 4pm, her business phone extension is 456, and her cell phone number is 555-555-5552
+Employee "jesse" is affiliated with the "Marketing" department. His office hours are from 10am to 6pm, his business phone extension is 789, and his cell phone number is 555-555-5553
+Employee "adam" is affiliated with the "Finance" department. His office hours are from 9am to 5pm, his business phone extension is 321, and his cell phone number is 555-555-5554
+Employee "shannon" is affiliated with the "Operations" department. Her office hours are from 8am to 4pm, her business phone extension is 654, and her cell phone number is 555-555-5555
+Employee "charlie" is affiliated with the "Sales" department. His office hours are from 9am to 5pm, his business phone extension is 987, and his cell phone number is 555-555-5556 -->
+    <script>
+        function deptData(name, afil, hours, phoneExt, cellPhone)
+        {
+            this.name = name;
+            this.deptaffil = afil;
+            this.hours = hours;
+            this.phoneExt = phoneExt;
+            this.cellPhone = cellPhone;
+            this.displayData = displayData;
+        }
+        
+        var employees = [
+            new deptData("rog", "IT", "9am to 5pm", "123", "555-555-5551"),
+            new deptData("mataia", "HR", "8am-4pm", "456", "555-555-5552"),
+            new deptData("adam", "Finanace", "9am-5pm", "321", "555-555-5553"),
+            new deptData("shannon", "Operations", "8am-4pm", "654", "555-555-5555"),
+            new deptData("charlie", "Sales", "9am-5pm", "987", "555-555-5556"),
+            new deptData("jesse", "Operations", "8am-4pm", "654", "555-555-5555"),
+        ]
+        var len = employees.length;
+        
+        function displayData(){
+            for(i = 0; i < len; i++)
+            {
+                if(document.getElementsByTagName("select")[0].value == employees[i].name)
+                {
+                    alert(`Employee Name: ${employees.this.name} \nEmployee Dept: ${employees.this.deptaffil} \nEmployee Hours: ${employees.this.hours} \nEmployee Phone Ext: ${employees.this.phoneExt} \nEmployee Phone Number: ${employees.this.cellPhone}`);
+                }   
+            }   
+        }
+        var info = ""; 
+        alert(employees[1].displayData());
+        function insert()
+        {
+            for(i=0; i < employees.length; i++)
+            {
+                
+                info += `\n\nEmployee Name: ${employees[i].name} \nEmployee Dept: ${employees[i].deptaffil} \nEmployee Hours: ${employees[i].hours} \nEmployee Phone Ext: ${employees[i].phoneExt} \nEmployee Phone Number: ${employees[i].cellPhone}`; 
+            }  
+            return info;
+        }
+        console.log(info);
+        function showEmployee(){
+            
+            {
+                alert(insert());
+            }
+        }
+        var button = document.getElementById('button');
+        button.addEventListener('click', displayData);
+        document.getElementById('button2').addEventListener('click', showEmployee);
+       
+    </script>
+</body>
+</html>
