@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typed</title>
+</head>
+<body>
+    <h1>CIW Javascript Specialist</h1>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <form id="form">
+    <p>Please Select your favorite type of website</p>
+        <input id="webDev" name="group1" type="radio" value="webDevelopment" checked>Web Development<br>
+        <input id="govt" name="group1" type="radio" value="usGovernment">Us Government<br>
+        <input id="A" name="group1" type="radio" value="a">A<br>
+        <input id="b" name="group1" type="radio" value="b">B<br>
+        <input id='c'name="group1" type="radio" value="c">C<br>
+        <p>
+        <input id='submit' type="submit" value="Click Here" onclick="test()">
+        </p>
+        <div id="new"></div>
+    </form>
+        
+    
+    <script>
+        function test()
+        {
+            if(document.getElementById('webDev').checked === true)
+            {
+                answer = document.getElementById('webDev').value;
+                let change = document.getElementById('webDev').value = "web developer";
+                console.log(`${change}`);
+                alert(`hello ${answer}`);
+            }
+            if(document.getElementById('govt').checked === true)
+            {
+                answer = document.getElementById('govt').value;
+                let header = 'hello';
+                let greet = document.getElementById('govt').value = "uncle sam!";
+                alert(`${header} ${greet}`);
+            }
+            redirect();
+        }
+
+        function redirect()
+        {
+            console.log(answer);
+            document.write("<h1>youre on another page</h1><br>")
+            if(answer == 'webDevelopment')
+            {
+               document.write("<p><a href='https://www.usa.gov'>Click here for new website</a></p>");
+            }
+            if(answer == 'usGovernment')
+            {
+                document.write("<p><a href='https://www.help.gov'>Click here for new website</a></p>")
+            }
+        }
+    </script>
+</body>
+</html>

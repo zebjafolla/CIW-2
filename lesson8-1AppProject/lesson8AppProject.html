@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the Record Shop!</h1>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <form name="form1">Please select a band
+        <select name="select1">
+            <option>Please select</option>
+        </select>
+    </form>
+    <script>
+        class Record{
+            constructor(name, band, year, size, condition)
+            {
+                this.name = name;
+                this.band = band;
+                this.year = year;
+                this.size = size;
+                this.condition = condition;
+            }
+        }
+        Record.prototype.display = display;
+        
+        var discs = [];
+        discs[0] = new Record("Hidden in Eternity/Eraser III", "S.H.I.T.", 2022, "7-inch", "Good");
+        discs[1] = new Record("Crisis EP", "scarecrow", 2020, "7-inch", "Good");
+        discs[2] = new Record("Suicidas", 'suicidas', 2012, "12-inch", "Good");
+        discs[3] = new Record("The Best of 2pac", "2pac", 2022, "12-inch", "Fair");
+        discs[4] = new Record("You made it this far", "Esther Rose", 2019, "12-inch", "Fair");
+        discs[5] = new Record("STILL NOTHING MOVES YOU", "Ceremony", 2008, "12-inch", "Fair");
+        var select = document.querySelector('select'); 
+        for (i=0; i < discs.length; i++)
+        {
+            newOption = new Option(discs[i].band, discs[i].band);
+            select.add(newOption, undefined);
+        }
+        select.addEventListener('change', change) 
+        function change()
+        {
+            for (i = 0; i < discs.length; i++)
+            {
+                if(select.value == discs[i].band)
+                {
+                    discs[i].display();
+                }
+            }
+            select.selectedIndex = 0;
+
+        }
+        function display(){
+            alert(`Record name: ${this.name}\n
+            Band Name: ${this.band}\n
+            Year: ${this.year}\n
+            Type: ${this.size}\n
+            Condition: ${this.condition}`
+            )
+        }
+        
+        
+
+
+    </script>
+</body>
+</html>
